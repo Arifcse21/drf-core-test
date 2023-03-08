@@ -9,7 +9,6 @@ from .models import (
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = [
         "id",
-        "uuid",
         "username",
         "email",
         "employer",
