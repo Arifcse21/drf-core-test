@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  drf:
+    image: drf_repliq
+    container_name: repliq_test
+    tty: true
+    restart: on-failure
+    build:
+      context: .
+      network: host
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    command: sh -c "$APP/script.sh"
+    
