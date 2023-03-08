@@ -1,5 +1,11 @@
+from .create_assets_view import CreateAssetsView
 from .create_company_view import CreateCompanyView
+from .delete_assets_view import DeleteAssetsView
+from .get_all_assets_of_company import GetAllAssetOfCompanyView
 from .get_all_companies_view import GetCompanyView
+from .individual_asset_view import IndividualAssetView
 from .individual_company_view import IndividualCompanyView
+from .update_asset_view import UpdateAssetView
 from .update_company_view import UpdateCompanyView
 from .delete_company_view import DeleteCompanyView
+

@@ -4,7 +4,13 @@ from assets.views import (
     GetCompanyView,
     UpdateCompanyView,
     DeleteCompanyView,
-    IndividualCompanyView
+    IndividualCompanyView,
+
+    CreateAssetsView,
+    DeleteAssetsView,
+    GetAllAssetOfCompanyView,
+    IndividualAssetView,
+    UpdateAssetView,
 )
 from django.urls import path, include
 
@@ -21,6 +27,17 @@ router.register("update-company", UpdateCompanyView, basename="update-company")
 router.register("delete-company", DeleteCompanyView, basename="delete-company")
 # Individual company
 router.register("individual-company", IndividualCompanyView, basename="individual-company")
+
+# Create assets
+router.register("create-asset", CreateAssetsView, basename="create-asset")
+# Delete assets
+router.register("delete-asset", DeleteAssetsView, basename="delete-asset")
+# Get company's assets
+router.register("company-assets", GetAllAssetOfCompanyView, basename="company-assets")
+# Individual asset
+router.register("individual-asset", IndividualAssetView, basename="individual-asset")
+# Update asset
+router.register("update-asset", UpdateAssetView, basename="update-asset")
 
 
 urlpatterns = [

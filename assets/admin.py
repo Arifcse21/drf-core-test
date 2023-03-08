@@ -20,10 +20,10 @@ class CompanyAdmin(admin.ModelAdmin):
 class AssetAdmin(admin.ModelAdmin):
     list_display = [
         "id",
-        "name",
-        "model",
-        "stock",
-        "company_name",
+        "asset_name",
+        "asset_model",
+        "asset_stock",
+        "asset_of_company_id",
         "created_at",
         "modified_at"
     ]
