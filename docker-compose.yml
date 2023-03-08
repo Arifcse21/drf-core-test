@@ -9,9 +9,9 @@ services:
     build:
       context: .
       network: host
-    env_file:
-      - .env
+#    env_file:
+#      - .env
     ports:
       - "8001:8001"
-    command: sh -c "$APP/script.sh"
+    command: sh -c "/repliq/script.sh"
     
