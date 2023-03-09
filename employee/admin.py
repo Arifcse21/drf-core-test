@@ -9,11 +9,12 @@ from .models import (
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = [
         "id",
-        "username",
+        "full_name",
         "email",
         "employer",
         "created_at",
-        "modified_at"
+        "modified_at",
+        "is_active",
     ]
 
 
@@ -25,9 +26,9 @@ class GadgetHandoutAdmin(admin.ModelAdmin):
         "gadget_id",
         "employer_id",
         "checked_out_at",
+        "created_at",
+        "modified_at",
         "is_returned",
         "returned_at",
-        "created_at",
-        "modified_at"
     ]
 

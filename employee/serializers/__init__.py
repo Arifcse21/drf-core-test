@@ -1,3 +1,4 @@
 from .create_employee_serializer import CreateEmployeeSerializer
 from .create_gadget_handout_serializer import CreateGadgetHandoutSerializer
+from .update_gadget_return_serializer import UpdateGadgetReturnSerializer
 
