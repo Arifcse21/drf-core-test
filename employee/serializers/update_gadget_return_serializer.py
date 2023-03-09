@@ -2,8 +2,9 @@ from rest_framework.serializers import ModelSerializer
 from employee.models import GadgetHandout
 
 
-class CreateGadgetHandoutSerializer(ModelSerializer):
+class UpdateGadgetReturnSerializer(ModelSerializer):
 
     class Meta:
         model = GadgetHandout
-        exclude = ("is_checked_out", "is_returned", "returned_at",)
+        exclude = ("is_checked_out", "checked_out_at", "is_returned", "employer_id")
+
