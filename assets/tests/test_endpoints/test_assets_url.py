@@ -26,6 +26,6 @@ class TestAssetsUrl:
         response = resp.json()
         assert response["error"] is False
         assert response["status_code"] == resp.status_code
-        
+
 
 
