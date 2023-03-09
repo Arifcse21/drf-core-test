@@ -38,6 +38,6 @@ class CreateCompanyView(ViewSet):
                 "message": str(e),
                 "status_code": status.HTTP_400_BAD_REQUEST,
             }
-            return Response(api_response, status=status.HTTP_201_CREATED)
+            return Response(api_response, status=status.HTTP_400_BAD_REQUEST)
 
 
