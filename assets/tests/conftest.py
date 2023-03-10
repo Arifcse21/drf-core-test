@@ -4,6 +4,12 @@ from rest_framework.test import APIClient
 from django.urls import reverse
 
 
+@pytest.fixture(scope="session")
+def django_db_setup(django_db_setup, django_db_blocker):
+    with django_db_blocker.unblock():
+        pass
+
+
 @pytest.fixture
 def company_data(db):
     company = Company.objects.create(

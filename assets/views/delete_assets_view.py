@@ -16,7 +16,7 @@ class DeleteAssetsView(ViewSet):
             api_response = {
                 "error": False,
                 "status_code": status.HTTP_200_OK,
-                "message": f"Assest with {pk} deleted",
+                "message": f"Asset with id {pk} deleted",
             }
             return Response(api_response, status=status.HTTP_200_OK)
         except Exception as e:
