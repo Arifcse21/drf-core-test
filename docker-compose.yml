@@ -2,16 +2,31 @@ version: "3.9"
 
 services:
   drf:
-    image: drf_repliq
+    image: drf_repliq:latest
     container_name: repliq_test
     tty: true
     restart: on-failure
     build:
       context: .
       network: host
-#    env_file:
-#      - .env
+    env_file:
+      - .env
     ports:
       - "8001:8001"
     command: sh -c "/repliq/script.sh"
-    
+    depends_on:
+      - db
+#      db:
+#        condition: service_healthy
+  db:
+    image: postgres:latest
+    container_name: repliq_db
+    environment:
+      - "POSTGRES_DB=${DB_NAME}"
+      - "POSTGRES_USER=${DB_USER}"
+      - "POSTGRES_PASSWORD=${DB_PASSWORD}"
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+
